@@ -6,21 +6,45 @@ package com.stackroute.datamunger.query.parser;
  * */
 public class Restriction {
 
+	// Write logic for constructor
+	private String propertyName;
+	private String propertyValue;
+	private String condition;
+	public Restriction(String name, String value, String condition) {
+      this.propertyName=name;
+      this.propertyValue=value;
+      this.condition=condition;
+      
+	}
+	
 	public String getPropertyName() {
-		// TODO Auto-generated method stub
-		return null;
+		return propertyName;
+	}
+
+	public void setPropertyName(String propertyName) {
+		this.propertyName = propertyName;
 	}
 
 	public String getPropertyValue() {
-		// TODO Auto-generated method stub
-		return null;
+		return propertyValue;
+	}
+
+	public void setPropertyValue(String propertyValue) {
+		this.propertyValue = propertyValue;
 	}
 
 	public String getCondition() {
-		// TODO Auto-generated method stub
-		return null;
+		return condition;
 	}
-	
-	
+
+	public void setCondition(String condition) {
+		this.condition = condition;
+	}
+
+	@Override
+	public String toString() {
+		return "Restriction [propertyName=" + propertyName + ", propertyValue=" + propertyValue + ", condition="
+				+ condition + "]";
+	}
 
 }

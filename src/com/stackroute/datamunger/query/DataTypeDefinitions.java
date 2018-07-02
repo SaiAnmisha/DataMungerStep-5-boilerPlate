@@ -17,27 +17,50 @@ public class DataTypeDefinitions {
 	//method stub
 	public static Object getDataType(String input) {
 	
+		
+		    	
+		    
 		// checking for Integer
-		
+		   if(input.matches("[0-9]+")) {
+			return "java.lang.Integer";
+			}
 		// checking for floating point numbers
-		
+		  else if(input.matches("[0-9]+.[0-9]+")) {
+			return "java.lang.Float";
+			}
 		// checking for date format dd/mm/yyyy
-		
+		  else if(input.matches("[0-9]{2}/[0-9]{2}/[0-9]{4}")) {
+				return "java.util.Date";
+				}
 		// checking for date format mm/dd/yyyy
-		
+		  else if(input.matches("[0-9]{2}/[0-9]{2}/[0-9]{4}")) {
+				return "java.util.Date";
+				}
 		// checking for date format dd-mon-yy
-		
+		  else if(input.matches("[0-9]{2}-[a-z A-Z]{3}-[0-9]{2}")) {
+				return "java.util.Date";
+				}
 		// checking for date format dd-mon-yyyy
-		
+		  else if(input.matches("[0-9]{2}-[a-z A-Z]{3}-[0-9]{4}")) {
+				return "java.util.Date";
+				}
 		// checking for date format dd-month-yy
-		
+		  else if(input.matches("[0-9]{2}-[a-z A-Z]{3,9}-[0-9]{2}")) {
+				return "java.lang.Float";
+				}
 		// checking for date format dd-month-yyyy
-		
+		  else if(input.matches("[0-9]{2}-[a-z A-Z]{3,9}-[0-9]{4}")) {
+				return "java.lang.Float";
+				}
 		// checking for date format yyyy-mm-dd
-		
-		return null;
-	}
+		  else if(input.matches("[0-9]{4}-[0-9]{2}-[0-9]{2}")) {
+				return "java.util.Date";
+				}
 	
-
+		  else {
+			  return "java.lang.Object";
+		  }
+		
+	}
 	
 }
